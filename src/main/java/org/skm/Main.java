@@ -2,6 +2,8 @@ package org.skm;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        DamselRescuingKnight quest=new DamselRescuingKnight();
+        quest.embarkOnQuest();
+
     }
 }
