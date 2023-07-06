@@ -1,6 +1,6 @@
 package org.skm;
 
-public class BraveKnight {
+public class BraveKnight implements Knight{
     private Quest quest;
 
     public BraveKnight(Quest quest)
@@ -8,6 +8,7 @@ public class BraveKnight {
         this.quest=quest;
     }
 
+    @Override
     public void embarkOnQuest(){quest.embark();
     }
 }
