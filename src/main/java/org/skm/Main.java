@@ -2,6 +2,7 @@ package org.skm;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
@@ -9,9 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-        Knight knight= (Knight) context.getBean("knight");
-        knight.embarkOnQuest();
-
+        ApplicationContext context=new AnnotationConfigApplicationContext(KnightsConfig.class);
+        context.getBean(Knight.class).embarkOnQuest();
     }
 }

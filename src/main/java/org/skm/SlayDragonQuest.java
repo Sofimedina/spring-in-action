@@ -9,6 +9,6 @@ public class SlayDragonQuest implements Quest {
     }
     @Override
     public void embark() {
-        stream.println("Strem:slaying");
+        stream.println("Streaming:slaying");
     }
 }
